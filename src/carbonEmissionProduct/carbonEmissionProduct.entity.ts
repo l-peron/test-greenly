@@ -1,5 +1,5 @@
 import {BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm'
-import {CarbonEmissionIngredient} from "./carbonEmissionIngredients.entity";
+import {CarbonEmissionIngredient} from "./carbonEmissionIngredient.entity";
 
 @Entity('carbon_emission_products')
 export class CarbonEmissionProduct extends BaseEntity {

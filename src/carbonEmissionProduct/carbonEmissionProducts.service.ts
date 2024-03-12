@@ -6,7 +6,7 @@ import {
   type CreateCarbonEmissionProductDto
 } from './dto/create-carbonEmissionProduct.dto'
 import {CarbonEmissionFactor} from "../carbonEmissionFactor/carbonEmissionFactor.entity";
-import {CarbonEmissionIngredient} from "./carbonEmissionIngredients.entity";
+import {CarbonEmissionIngredient} from "./carbonEmissionIngredient.entity";
 
 @Injectable()
 export class CarbonEmissionProductsService {
@@ -25,9 +25,9 @@ export class CarbonEmissionProductsService {
   }
 
   async save (
-    carbonEmissionProduct: CreateCarbonEmissionProductDto[]
+    carbonEmissionProducts: CreateCarbonEmissionProductDto[]
   ): Promise<CarbonEmissionProduct[] | null> {
-    return await this.carbonEmissionProductRepository.save(carbonEmissionProduct);
+    return await this.carbonEmissionProductRepository.save(carbonEmissionProducts);
   }
 
   async getCarbonEmissionProductFootprint(id: CarbonEmissionProduct['id']): Promise<CarbonEmissionProduct | null> {
